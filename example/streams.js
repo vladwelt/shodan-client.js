@@ -13,10 +13,10 @@ const util = require('util');
 
 const client = require('../');
 
-const shodanKey = 'YOURKEYHERE';
+const shodanKey = 'YOUR API KEY';
 
-
-client.streams.banners(shodanKey)
+client.config(shodanKey);
+client.streams.banners()
 .then(res => {
   console.log('Result:');
   console.log(util.inspect(res, { depth: 6 }));
@@ -26,7 +26,7 @@ client.streams.banners(shodanKey)
   console.log(err);
 });
 
-// client.streams.asn('3303,32475', shodanKey)
+// client.streams.asn('3303,32475')
 // .then(res => {
 //   console.log('Result:');
 //   console.log(util.inspect(res, { depth: 6 }));
@@ -36,7 +36,7 @@ client.streams.banners(shodanKey)
 //   console.log(err);
 // });
 
-// client.streams.countries('DE,US', shodanKey)
+// client.streams.countries('DE,US')
 // .then(res => {
 //   console.log('Result:');
 //   console.log(util.inspect(res, { depth: 6 }));
@@ -46,7 +46,7 @@ client.streams.banners(shodanKey)
 //   console.log(err);
 // });
 //
-// client.streams.ports('1434,27017,6379', shodanKey)
+// client.streams.ports('1434,27017,6379')
 // .then(res => {
 //   console.log('Result:');
 //   console.log(util.inspect(res, { depth: 6 }));

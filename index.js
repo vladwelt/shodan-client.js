@@ -14,6 +14,7 @@
 const client = require('./lib/index');
 
 // Grouped methods.
+client.config = require('./lib/config')
 client.streams = require('./lib/streams');
 client.exploits = require('./lib/exploits');
 
